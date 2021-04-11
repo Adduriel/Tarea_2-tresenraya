@@ -1,0 +1,60 @@
+#include <iostream>
+
+using namespace std;
+
+void seleccion(){
+  char opcion;
+  cout<<"ponga un valor 'X' o 'O'"<<endl;
+  cin>>opcion;
+  if(opcion != 'X' && opcion != 'O'&& opcion != 'x' && opcion != 'o'){
+    cout<<"Escriba un valor correcto"<<endl;
+  }
+  else{
+      cout<<"usted ha elegido "<<opcion<<endl;
+
+  }
+}
+
+void matriz(){
+  int matriz[3][3];
+  char opcion2;
+  int usuario;
+
+  for(int i=0; i<3; i++){
+    for(int j=0; j<3; j++){
+      cout << "Numeros["<< i <<"]["<< j <<"]: ";
+      cin>>matriz[i][j];
+    }
+  }
+  for (int i = 0; i < 3; i++){                          
+        for (int j = 0; j < 3; j++){
+            if (i < 3 && i % 2 == 0 && i % 2 == 1){
+              cout<<matriz[i][j]<<"\n";
+              cout<<"---------------------";}
+            else{
+              cout<<matriz[i][j];
+            }
+            if(j<3){
+              cout<<"|";
+            }
+        }
+      cout<<"\n";
+  }
+  for(int i=0; i<3; i++){
+    for(int j=0; j<3; j++){
+      cout<<"Conde deseas dejar la x?"; cin>>usuario;
+      if(usuario == matriz[i][j]){
+        matriz[i][j] = 'X';
+      }
+    }
+  }
+
+}
+
+
+
+
+int main(){
+  seleccion();
+  matriz();
+}
