@@ -55,7 +55,7 @@ void matriz(){ // aqui implemente toda la matriz, los datos que extrae y tambien
 
 
 
-int main(){ /este main es para inicializar todo.
+int main(){ //este main es para inicializar todo.
   seleccion();
   matriz();
 }
